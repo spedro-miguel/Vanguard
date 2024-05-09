@@ -1,86 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/navigation.css" />
-    <link rel="shortcut icon" href="./assets/favicon.png" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <title>Valorant Web</title>
-  </head>
 
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <img
-          src="./assets/Riot Games New 2022.svg"
-          alt="riot icon"
-          class="nav__riot"
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/navigation.css" />
+  <link rel="shortcut icon" href="./resources/logo vanguard 4k.png" />
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <title>Vanguard Web</title>
+</head>
 
-        <a href="#">
-          <img
-            src="./assets/val logo.svg"
-            alt="valorant logo"
-            class="nav__val"
-          />
-        </a>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <img class="nav__vanguard" src="./resources/logo vanguard 4k.png" alt="riot icon" />
+      <a href="#"><img class="nav__val" src="./resources/val logo.svg" alt="" /></a>
+      <ul class="nav__ul">
+        <li class="nav__li nav__li--1"><a href="#inicio">INÍCIO</a></li>
+        <li class="nav__li nav__li--2"><a href="#valorant">VALORANT</a></li>
+        <li class="nav__li nav__li--3"><a href="#agentes">AGENTES</a></li>
+        <li class="nav__li nav__li--4"><a href="#mapas">MAPAS</a></li>
+      </ul>
+      <div class="nav__second">
+        <button class="nav__play"><a href="./login.html">FAÇA LOGIN</a></button>
+      </div>
 
-        <ul class="nav__ul">
-          <li class="nav__li nav__li--1">INÍCIO</li>
-          <li class="nav__li nav__li--2">SOBRE</li>
-          <li class="nav__li nav__li--3">AGENTES</li>
-          <li class="nav__li nav__li--4">MAPAS</li>
-          <li class="nav__li nav__li--5">
-            <p>MAIS</p>
+    </nav>
+  </header>
 
-            <ul class="subNav">
-              <li class="nav__li subNav__li subNav__li--1">INÍCIO</li>
-              <li class="nav__li subNav__li subNav__li--2">SOBRE</li>
-              <li class="nav__li subNav__li subNav__li--3">AGENTES</li>
-              <li class="nav__li subNav__li subNav__li--4">MAPAS</li>
-            </ul>
-          </li>
-        </ul>
-
-        <div class="nav__second">
-          <div id="searchContainer" class="nav__search">
-            <img src="./assets/lupa.png" alt="" class="nav_search--icon" />
-
-            <textarea
-              class="nav__search--text"
-              name="search"
-              id="search"
-            ></textarea>
-
-            <img
-              src="./assets/close.png"
-              alt="close icon"
-              id="close"
-              class="nav_search--close"
-            />
-          </div>
-
-          <div class="nav__btnContainer">
-            <img
-              src="./assets/language.svg"
-              alt="world icon"
-              class="nav__language"
-            />
-          </div>
-
-          <button class="nav__play">JOGUE NOSSO QUIZ</button>
-        </div>
-      </nav>
-    </header>
-
-    <main>
+  <main>
+    <section id="inicio">
       <div class="hero">
         <video class="hero__video" autoplay loop muted>
-          <source src="./assets/valorant-hero-video.mp4" />
+          <source src="./resources/valorant-hero-video.mp4" />
         </video>
-
         <div class="hero__text">
           <div class="hero__line"></div>
           <div class="hero__polygon1"></div>
@@ -88,286 +43,173 @@
             <h3 class="hero__subtitle">
               Um jogo de tiro tático 5x5 com personagens originais
             </h3>
-
-            <img
-              src="./assets/valorant-word-logo.svg"
-              alt=""
-              class="hero__valorant"
-            />
+            <img src="./resources/valorant-word-logo.svg" alt="" class="hero__valorant" />
           </div>
-
           <div class="button hero__btnContainer">
             <div class="button__borderTop"></div>
             <div class="button__borderBottom"></div>
-
             <button class="button__child hero__btn">
               <div class="button__square"></div>
             </button>
           </div>
         </div>
-
         <div class="hero__polyContainer">
           <div class="hero__polygon2"></div>
         </div>
       </div>
-
-      <section class="overview">
-        <div class="overview__polygon"></div>
-
-        <div class="overview__container">
-          <div class="overview__topLine"></div>
-          <div class="overview__titleContainer">
-            <h2 class="overview__title">WE ARE VALORANT</h2>
-          </div>
-
-          <div class="overview__square"></div>
-          <div class="overview__protocol">
-            <p class="protocol__text">VLRT PROTOCOL</p>
-            <p class="protocol__text">MR0C - SWD - BR4</p>
-
-            <div class="protocol__line"></div>
-          </div>
-
-          <div class="overview__content">
-            <div class="content__squares">
-              <div class="content__square1"></div>
-              <div class="content__square2"></div>
-              <div class="content__square3"></div>
-            </div>
-
-            <div class="content__text">
-              <h4 class="content__title">DESAFIE SEUS LIMITES</h4>
-
-              <p class="content__paragraph">
-                Misture o seu estilo e experiência em um cenário global e
-                competitivo. Você terá 13 rodadas para atacar e defender com
-                disparos certeiros e habilidades táticas. Com apenas uma vida
-                por rodada, você deve pensar mais rápido que o oponente se
-                quiser sobreviver. Encare inimigos nos modos Competitivo e Sem
-                Ranque, além da Disputa da Spike e do Mata-Mata!
-              </p>
-
-              <div class="content__btnContainer button hero__btnContainer">
-                <div class="button__borderTop content__btnBorderTop"></div>
-                <div class="button__borderBottom content__btnBorderBotom"></div>
-
-                <button class="button__child content__btn">
-                  <div class="button__square"></div>
-                </button>
-              </div>
-            </div>
-
-            <div class="content__gameplay">
-              <div class="gameplay__squares">
-                <div class="gameplay__square"></div>
-                <div class="gameplay__square"></div>
-              </div>
-
-              <h5 class="gameplay__title">Jogo</h5>
-              <div class="gameplay__videoContainer">
-                <div class="gameplay__btn">
-                  <div class="gameplay__btnSquare"></div>
-                </div>
-
-                <video class="gameplay__video" autoplay loop muted>
-                  <source
-                    src="./assets/VALORANT_PLAY22_16x9_Target4_v005.mp4"
-                  />
-                </video>
-              </div>
-
-              <div class="gameplay__line"></div>
-            </div>
-          </div>
-
-          <p class="overview__numbers">00.</p>
+    </section>
+    <!-- ============= OVERVIEW SECTION ============== -->
+    <section id="valorant" class="overview">
+      <div class="overview__polygon"></div>
+      <div class="overview__container">
+        <div class="overview__topLine"></div>
+        <div class="overview__titleContainer">
+          <h2 class="overview__title">NÓS SOMOS VALORANT</h2>
         </div>
-
-        <div class="overview__fill"></div>
-      </section>
-
-      <section class="agents">
-        <div class="agents__brackground1">
-          <div class="agents__brackground1Img"></div>
+        <div class="overview__square"></div>
+        <div class="overview__protocol">
+          <p class="protocol__text">VLRT PROTOCOL</p>
+          <p class="protocol__text">MR0C - SWD - BR4</p>
+          <div class="protocol__line"></div>
         </div>
-        <div class="agents__content">
-          <div class="agents__contentBackground"></div>
-          <div class="agents__models">
-            <img
-              src="./assets/V_AGENTS_587x900_Reyna.png"
-              alt=""
-              class="agents__reyna"
-            />
-            <img
-              src="./assets/V_AGENTS_587x900_ALL_Raze_2.png"
-              alt=""
-              class="agents__raze"
-            />
+        <div class="overview__content">
+          <div class="content__squares">
+            <div class="content__square1"></div>
+            <div class="content__square2"></div>
+            <div class="content__square3"></div>
           </div>
 
-          <div class="agents__text">
-            <div class="agents__titleContainer">
-              <h2 class="agents__title">SEUS AGENTES</h2>
-            </div>
-
-            <h4 class="agents__subtitle">A CRIATIVIDADE É SUA MELHOR ARMA</h4>
-            <p class="agents__paragraph">
-              Mais do que armas e munição, VALORANT inclui agentes com
-              habilidades adaptativas, rápidas e letais, que criam oportunidades
-              para você exibir sua mecânica de tiro. Cada agente é único, assim
-              como os momentos de destaque de cada partida!
+          <div class="content__text">
+            <h4 class="content__title">DESAFIE SEUS LIMITES</h4>
+            <p class="content__paragraph">
+              Misture o seu estilo e experiência em um cenário global e competitivo. Você terá 13 rodadas para atacar e
+              defender com disparos certeiros e habilidades táticas. Com apenas uma vida por rodada, você deve pensar
+              mais rápido que o oponente se quiser sobreviver. Encare inimigos nos modos Competitivo e Sem Ranque, além
+              da Disputa da Spike e do Mata-Mata!
             </p>
+          </div>
 
-            <div class="button hero__btnContainer agents__btnCpntainer">
-              <div class="button__borderTop"></div>
-              <div class="button__borderBottom"></div>
-              <button class="button__child agents__btn">
-                <div class="button__square"></div>
-              </button>
+          <div class="content__gameplay">
+            <div class="gameplay__squares">
+              <div class="gameplay__square"></div>
+              <div class="gameplay__square"></div>
             </div>
-          </div>
-        </div>
-
-        <div class="agents__background2">
-          <div class="agents__background2Img"></div>
-        </div>
-      </section>
-
-      <section class="maps">
-        <div class="maps__sideBackground">
-          <img
-            src="./assets/mapsSideBackground1.png"
-            alt=""
-            class="maps__sideBackground1"
-          />
-          <img
-            src="./assets/mapsSideBackground2.png"
-            alt=""
-            class="maps__sideBackground2"
-          />
-        </div>
-
-        <img
-          src="./assets/maps-03ebbf2c074f13a65af1dba0c80f767e.png"
-          alt=""
-          class="maps__background1"
-        />
-        <img src="./assets/birds.png" alt="" class="maps__birds" />
-
-        <div class="maps__content">
-          <p class="maps__place">PLACE</p>
-          <div class="maps__background"></div>
-          <div class="maps__text">
-            <h2 class="maps__title">SEUS MAPAS</h2>
-            <h4 class="maps__subtitle">BATALHE AO REDOR DO MUNDO</h4>
-            <p class="maps__paragraph">
-              Cada mapa serve como um palco para mostrar sua criatividade. Os
-              mapas são feitos sob medida para estratégias de equipe, jogadas
-              espetaculares e momentos eletrizantes. Faça as jogadas que todo
-              mundo vai tentar imitar no futuro!
-            </p>
-            <div class="button hero__btnContainer maps__btnContainer">
-              <div class="button__borderTop mapsBtn__borderTop"></div>
-              <div class="button__borderBottom mapsBtn__borderBottom"></div>
-              <button class="button__child maps__btn">
-                <div class="button__square"></div>
-              </button>
+            <h5 class="gameplay__title">JOGO</h5>
+            <div class="gameplay__videoContainer">
+              <div class="gameplay__btn" alt="">
+                <div class="gameplay__btnSquare"></div>
+              </div>
+              <video class="gameplay__video" autoplay loop muted>
+                <source src="./resources/VALORANT_PLAY22_16x9_Target4_v005.mp4" />
+              </video>
             </div>
+            <div class="gameplay__line"></div>
           </div>
         </div>
-      </section>
+        <p class="overview__numbers">00.</p>
+      </div>
+      <div class="overview__fill"></div>
+    </section>
 
-      <footer class="footer">
-        <div class="footer__downloadContainer">
-          <a href="https://playvalorant.com/pt-br/download/" target="_blank"
-            ><button class="footer__game footer__button">
-              BAIXE O JOGO
-            </button></a
-          >
-          <a
-            href="https://play.google.com/store/apps/details?id=com.riotgames.mobile.leagueconnect" target="_blank"
-            ><button class="footer__app footer__button">
-              BAIXE O APLICATIVO DE CELULAR RIOT MOBILE
-            </button></a
-          >
+    <!-- ========= OVERVIEW AGENTS =========== -->
+    <section id="agentes" class="agents">
+      <div class="agents__background1">
+        <div class="agents__background1Img"></div>
+      </div>
+      <div class="agents__content">
+        <div class="agents__contentBackground"></div>
+        <div class="agents__models">
+          <img class="agents__reyna" src="./resources/V_AGENTS_587x900_Reyna.png" alt="" />
+          <img alt="" class="agents__raze" src="./resources/V_AGENTS_587x900_ALL_Raze_2.png" />
         </div>
-        <div class="footer__container">
-          <div class="footer__mediaContainer">
-            <a href="https://twitter.com/valorantbrasil" target="_blank"
-              ><img
-                src="./assets/media-twitter.svg"
-                alt=""
-                class="footer__media twitter"
-            /></a>
-            <a href="https://www.youtube.com/channel/UCgWiuB2PQIUhJgEN9No281g" target="_blank"
-              ><img
-                src="./assets/media-youtube.svg"
-                alt=""
-                class="footer__media"
-            /></a>
-            <a href="https://www.instagram.com/valorantbrasil" target="_blank"
-              ><img
-                src="./assets/media-instagram.svg"
-                alt=""
-                class="footer__media"
-            /></a>
-            <a href="https://www.facebook.com/VALORANTbrasil/" target="_blank"
-              ><img
-                src="./assets/media-facebook.svg"
-                alt=""
-                class="footer__media"
-            /></a>
-            <a href="https://discord.com/invite/valorant-br" target="_blank"
-              ><img
-                src="./assets/media-discord.svg"
-                alt=""
-                class="footer__media"
-            /></a>
+        <div class="agents__text">
+          <div class="agents__titleContainer">
+            <h2 class="agents__title">SEUS AGENTES</h2>
           </div>
-          <div class="footer__logos">
-            <img
-              src="./assets/Riot Games New 2022.svg"
-              alt=""
-              class="footer__riotLogo"
-            />
-            <img
-              src="./assets/val-logo-small.png"
-              alt=""
-              class="footer__valorantLogo"
-            />
-          </div>
-          <p class="footer__copyright">
-            © 2023 Riot Games, Inc. Riot Games, VALORANT, and any associated
-            logos are trademarks, service marks, and/or registered trademarks of
-            Riot Games, Inc.
+          <h4 class="agents__subtitle">
+            CRIATIVIDADE É A SUA MELHOR ARMA.
+          </h4>
+          <p class="agents__paragraph">
+            Mais do que armas e munição, VALORANT inclui agentes com habilidades adaptativas, rápidas e letais, que
+            criam oportunidades para você exibir sua mecânica de tiro. Cada Agente é único, assim como os momentos de
+            destaque de cada partida!
           </p>
-          <div class="footer__policies">
-            <a href="https://www.riotgames.com/pt-br/privacy-notice-BR" target="_blank"><button class="footer__button">POLÍTICA DE PRIVACIDADE</button></a>
-            <a href="https://www.riotgames.com/pt-br/terms-of-service-BR" target="_blank"><button class="footer__button">TERMOS DE SERVIÇO</button></a>
+          <div class="button hero__btnContainer agents__btnContainer">
+            <div class="button__borderTop"></div>
+            <div class="button__borderBottom"></div>
+            <button class="button__child agents__btn">
+              <div class="button__square"></div>
+            </button>
           </div>
-          <div class="footer__ratings">
-            <img
-              src="./resources/ratings.png"
-              alt=""
-              class="footer__ratingsImg"
-            />
-            <p class="footer__ratingsText">
-              Blood<br />Language<br />Violence<br />Users Interact<br />In-Game
-              Purchases
-            </p>
-          </div>
-          <p class="footer__madeBy">
-            FEITO POR PEDRO MIGUEL 2024 - SOMENTE PARA USO DE ESTUDO
-          </p>
         </div>
-      </footer>
-    </main>
+      </div>
+      <div class="agents__background2">
+        <div class="agents__background2Img"></div>
+      </div>
+    </section>
 
-    <script src="./js/nav-responsive.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-    <script src="./js/animations.js"></script>
+    <!-- ============== OVERVIEW MAPS =============== -->
 
-  </body>
+    <section id="mapas" class="maps">
+      <div class="maps__sideBackground">
+        <img src="./resources/mapsSideBackground1.png" alt="" class="maps__sideBackground1" />
+        <img src="./resources/mapsSideBackground2.png" alt="" class="maps__sideBackground2" />
+      </div>
+      <img src="./resources/maps-03ebbf2c074f13a65af1dba0c80f767e.png" alt="" class="maps__background1">
+      <img src="./resources/birds.png" alt="" class="maps__birds" />
+      <div class="maps__content">
+        <p class="maps__place">PLACE</p>
+        <div class="maps__background"></div>
+        <div class="maps__text">
+          <h2 class="maps__title">SEUS MAPAS</h2>
+          <h4 class="maps__subtitle">LUTE AO REDOR DO MUNDO.</h4>
+          <p class="maps__paragraph">
+            Cada mapa serve como um palco para mostrar sua criatividade. Os mapas são feitos sob medida para estratégias
+            de equipe, jogadas espetaculares e momentos eletrizantes. Faça as jogadas que todo mundo vai tentar imitar
+            no futuro!
+          </p>
+          <div class="button hero__btnContainer maps__btnContainer">
+            <div class="button__borderTop mapsBtn__borderTop"></div>
+            <div class="button__borderBottom mapsBtn__borderBottom"></div>
+            <button class="button__child maps__btn">
+              <div class="button__square"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== FOOTER =========== -->
+    <div class="footer__container">
+      <div class="footer__mediaContainer">
+        <img src="./resources/media-twitter.svg" alt="" class="footer__media twitter">
+        <img src="./resources/media-youtube.svg" alt="" class="footer__media">
+        <img src="./resources/media-instagram.svg" alt="" class="footer__media">
+        <div class="footer__tiktokContainer footer__media">
+          <img src="./resources/media-tiktok-img.png" alt="" class="footer__tiktok">
+        </div>
+        <img src="./resources/media-facebook.svg" alt="" class="footer__media">
+        <img src="./resources/media-discord.svg" alt="" class="footer__media">
+      </div>
+      <div class="footer__logos">
+        <img src="./resources/Riot Games New 2022.svg" alt="" class="footer__riotLogo">
+        <img src="./resources/val-logo-small.png" alt="" class="footer__valorantLogo">
+      </div>
+      <div class="footer__ratings">
+        <img src="./resources/ratings.png" alt="" class="footer__ratingsImg">
+        <p class="footer__ratingsText">Sangue<br>Violencia<br>Compras em
+          jogo<br>Linguagem imprópria<br>Interação com usuário</p>
+      </div>
+      <p class="footer__madeBy">FEITO POR PEDRO MIGUEL 2024 - APENAS PARA USO DE ESTUDO</p>
+    </div>
+    </footer>
+  </main>
+
+  <script src="./scripts/nav-responsive.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+  <script src="./scripts/animations.js"></script>
+</body>
+
 </html>
