@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./resources/logo vanguard 4k.png" />
+    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="./styles/cadastro.css">
+    <script src="./scripts/cadastro.js" defer></script>
+    <title>Vanguard - Cadastro</title>
+</head>
+
+<body>
+
+    <main>
+        <section class="cadastro">
+
+            <div class="wrapper">
+                <img src="./resources/logo vanguard 4k.png" class="cadastro__logo">
+
+                <h1 class="cadastro__title">Cadastro</h1>
+
+                <label class="cadastro__label">
+                    <span>nome de usuário</span>
+                    <input type="text" name="username" class="input">
+                </label>
+
+                <label class="cadastro__label">
+                    <span>email</span>
+                    <input type="email" name="email" class="input">
+                </label>
+
+                <label class="cadastro__label">
+                    <span>senha</span>
+                    <input type="password" name="password" class="input">
+                </label>
+
+                <label class="cadastro__label">
+                    <span>confirmar senha</span>
+                    <input type="password" name="password" class="input">
+                </label>
+
+                <div class="cadastro__icons">
+                    <button type="button" class="icons__button">
+                        <img src="./resources/facebook-icon.png" alt="facebok">
+                    </button>
+
+                    <button type="button" class="icons__button">
+                        <img src="./resources/google-icon.png" alt="google">
+                    </button>
+
+                    <button type="button" class="icons__button">
+                        <img src="./resources/apple-icon.png" alt="apple">
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="wrapper">
+                <button type="button" class="cadastro__button" disabled><a href="./login.html">
+                        Cadastrar
+                    </a></button>
+
+                Já possui uma conta?
+                <a href="./login.html" class="login__link">Faça login agora!</a>
+            </div>
+
+        </section>
+
+        <section class="wallpaper"></section>
+    </main>
+
+</body>
+
+</html>
