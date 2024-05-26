@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>Agente - VIPER</title>
+    <link rel="icon" href="./resources/agentes/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css" />
+    <link rel="stylesheet" href="./styles/agentes.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <video autoplay muted loop id="myVideo">
+            <source src="./resources/agentes/video/agent-background-generic.mp4" type="video/mp4" />
+        </video>
+        <div class="sova-img-container">
+            <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltc825c6589eda7717/5eb7cdc6ee88132a6f6cfc25/V_AGENTS_587x900_Viper.png"
+                alt="sova-img" class="sova-img" />
+        </div>
+        <div class="header-text-container">
+            <h1 id="agent-name">VIPER</h1>
+            <div class="desc-container">
+                <p>// Agente 05</p>
+                <h2><img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt63e21ca9443dce8e/5eb270f43b09c042ddca1353/Controller.png"
+                        alt="" /> CONTROLADORA</h2>
+                <p>Viper, a química dos Estados Unidos, emprega uma variedade de dispositivos químicos venenosos para
+                    controlar o campo de batalha e prejudicar a visão do inimigo. Se as toxinas não matarem a presa,
+                    seus jogos mentais certamente o farão.</p>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- SKILL -->
+    <section class="skill-container" id="skill">
+        <h1><span>//</span> HABILIDADES ESPECIAIS</h1>
+        <div class="abilities-container">
+            <div class="abilities-button-text">
+                <div class="abilities-button">
+                    <div class="radio-container">
+                        <input type="radio" name="skill-btn" class="radio-btn" value="0" />
+                        <input type="radio" name="skill-btn" class="radio-btn" value="1" />
+                        <input type="radio" name="skill-btn" class="radio-btn" value="2" />
+                        <input type="radio" name="skill-btn" class="radio-btn" value="3" />
+                    </div>
+                    <button class="abilities-ico" id="0" onclick="skillBtn(0)">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltab09d009a46f6c08/5eaf85a2cf88d36e47cf0299/TX_Viper_Q.png"
+                            alt="" />
+                    </button>
+                    <button class="abilities-ico" id="1" onclick="skillBtn(1)">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt3c4a5fda3e7e8f16/5eaf85a226a7212f2db1beb6/TX_Viper_E.png"
+                            alt="" />
+                    </button>
+                    <button class="abilities-ico" id="2" onclick="skillBtn(2)">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt93b26c70173b0875/5eaf85a3b8a6356e4ddc0ffb/TX_Viper_C.png"
+                            alt="" />
+                    </button>
+                    <button class="abilities-ico" id="3" onclick="skillBtn(3)">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8698a8684bb39593/5eaf85a2f66b2515dea76b20/TX_Viper_X.png"
+                            alt="" />
+                    </button>
+                </div>
+                <br />
+                <div class="abilities-text">
+                    <h2 id="abilities-text-head">Escolha uma habilidade pressionando o botão acima</h2>
+                    <br />
+                    <p id="abilities-text-body"></p>
+                </div>
+                <br />
+            </div>
+            <video controls autoplay loop class="abilities-vid" id="abilities-src">
+                <source src="" type="video/mp4" />
+            </video>
+        </div>
+    </section>
+    <hr />
+    <br /><br /><br /><br /><br />
+    <!-- END OF SKILL -->
+
+    <!-- OTHER AGENTS -->
+    <section class="other-agents">
+        <h1><span>//</span> OUTROS AGENTES</h1>
+        <div class="agents-container">
+            <a href="astra.html" class="agent" id="1"><img src="./resources/agentes/astra.png" alt="" /></a>
+            <a href="breach.html" class="agent" id="2"><img src="./resources/agentes/breach.png" alt="" /></a>
+            <a href="brim.html" class="agent" id="3"><img src="./resources/agentes/brimstone.png" alt="" /></a>
+            <a href="cypher.html" class="agent" id="4"><img src="./resources/agentes/cypher.png" alt="" /></a>
+            <a href="jett.html" class="agent" id="5"><img src="./resources/agentes/jett.png" alt="" /></a>
+            <a href="KAYO.html" class="agent" id="6"><img src="./resources/agentes/kayo.png" alt="" /></a>
+            <a href="killjoy.html" class="agent" id="7"><img src="./resources/agentes/killjoy.png" alt="" /></a>
+            <a href="omen.html" class="agent" id="8"><img src="./resources/agentes/omen.png" alt="" /></a>
+            <a href="phoenix.html" class="agent" id="9"><img src="./resources/agentes/phoenix.png" alt="" /></a>
+            <a href="raze.html" class="agent" id="10"><img src="./resources/agentes/raze.png" alt="" /></a>
+            <a href="reyna.html" class="agent" id="11"><img src="./resources/agentes/reyna.png" alt="" /></a>
+            <a href="sage.html" class="agent" id="12"><img src="./resources/agentes/sage.png" alt="" /></a>
+            <a href="skye.html" class="agent" id="13"><img src="./resources/agentes/skye.png" alt="" /></a>
+            <a href="sova.html" class="agent" id="14"><img src="./resources/agentes/sova.png" alt="" /></a>
+            <a href="viper.html" class="agent" id="15"><img src="./resources/agentes/viper.png" alt="" /></a>
+            <a href="yoru.html" class="agent" id="16"><img src="./resources/agentes/yoru.png" alt="" /></a>
+        </div>
+    </section>
+    <!-- END OF OTHER AGENTS -->
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- My JS -->
+    <script src="./scripts/agentes.mjs"></script>
+    <script>
+        function skillBtn(n) {
+            skillRadio[n].checked = true;
+            if (skillRadio[n].checked == true) {
+                addBtn0(n);
+                abilitiesTextHead.innerHTML = abilities[14][n]["skill"];
+                abilitiesTextBody.innerHTML = abilities[14][n]["desc"];
+                abilitiesSrc.classList.add("show");
+                abilitiesSrc.src = abilities[14][n]["video"];
+            }
+        }
+    </script>
+</body>
+
+</html>
