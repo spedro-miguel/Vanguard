@@ -10,11 +10,10 @@ body {
   text-decoration: none;
 }
 a:hover {
-  color: #fff;
+  color: #ff4655;
 }
 header {
-  width: 1140px;
-  max-width: 80%;
+  width: 95%;
   font-size: 20px;
   font-weight: 600;
   margin: auto;
@@ -27,6 +26,8 @@ header {
 header a {
   color: #eee;
   margin-right: 40px;
+  justify-content: right;
+  text-decoration: none;
 }
 /* carousel */
 .carousel {

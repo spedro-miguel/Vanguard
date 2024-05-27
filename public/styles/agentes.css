@@ -52,6 +52,31 @@ header {
   margin: 0 0 100px 0;
 }
 
+a {
+  text-decoration: none;
+}
+.nav__bar {
+  width: 100%;
+  margin: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  position: relative;
+  z-index: 100;
+  font-size: 15px;
+}
+.nav__bar a {
+  color: #000;
+  font-weight: 600;
+  margin-right: 40px;
+}
+
+.nav__bar a:hover {
+  color: #ff4655;
+}
+
 #myVideo {
   z-index: -2;
 }
@@ -237,39 +262,6 @@ header {
 .agent.pick img {
   border: 5px solid #ff4655;
   filter: grayscale(0);
-}
-
-/* PLAY NOW */
-.play-now {
-  justify-content: center;
-  height: 20vh;
-  text-align: center;
-}
-
-.play-now button {
-  border: none;
-  padding: 1rem 3rem;
-  transition: all ease-in-out 0.2s;
-  font-weight: 700;
-  font-size: 4vh;
-  color: #fff;
-  background: linear-gradient(to right, #ff4655 50%, #ce323f 50%);
-  background-size: 200% 100%;
-  background-position: right;
-}
-
-.play-now button:hover {
-  letter-spacing: 5px;
-  background-position: left;
-  box-shadow: 10px 10px 0px 0px #0f1923;
-  cursor: pointer;
-}
-
-.play-now button:active {
-  letter-spacing: 5px;
-  background-position: left;
-  box-shadow: 10px 10px 0px 0px #0f1923;
-  cursor: pointer;
 }
 
 /* FOOTER */
