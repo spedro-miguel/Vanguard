@@ -1,76 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./resources/logo vanguard 4k.png" />
-    <link rel="stylesheet" href="cadastro.html">
-    <link rel="stylesheet" href="./styles/login.css">
-    <script src="./scripts/login.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/logo vanguard 4k.png" />
+    <link rel="stylesheet" href="cadastro.html" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="./js/login.js" defer></script>
     <title>Vanguard - Login</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <nav>
-            <a href="./index.html">SITE</a>
-            <a href="./agentes.html">AGENTES</a>
-            <a href="./mapas.html">MAPAS</a>
-        </nav>
+      <nav>
+        <a href="./index.html">SITE</a>
+        <a href="./agentes.html">AGENTES</a>
+        <a href="./mapas.html">MAPAS</a>
+      </nav>
     </header>
 
     <main>
-        <section class="login">
+      <section class="login">
+        <div class="wrapper">
+          <img src="./assets/logo vanguard 4k.png" class="login__logo" />
 
-            <div class="wrapper">
-                <img src="./resources/logo vanguard 4k.png" class="login__logo">
+          <h1 class="login__title">Fazer login</h1>
 
-                <h1 class="login__title">Fazer login</h1>
+          <label class="login__label">
+            <span>nome de usuário</span>
+            <input type="text" name="username" class="input" />
+          </label>
 
-                <label class="login__label">
-                    <span>nome de usuário</span>
-                    <input type="text" name="username" class="input">
-                </label>
+          <label class="login__label">
+            <span>senha</span>
+            <input type="password" name="password" class="input" />
+          </label>
 
-                <label class="login__label">
-                    <span>senha</span>
-                    <input type="password" name="password" class="input">
-                </label>
+          <div class="login__icons">
+            <button type="button" class="icons__button">
+              <img src="./assets/facebook-icon.png" alt="facebok" />
+            </button>
 
-                <div class="login__icons">
-                    <button type="button" class="icons__button">
-                        <img src="./resources/facebook-icon.png" alt="facebok">
-                    </button>
+            <button type="button" class="icons__button">
+              <img src="./assets/google-icon.png" alt="google" />
+            </button>
 
-                    <button type="button" class="icons__button">
-                        <img src="./resources/google-icon.png" alt="google">
-                    </button>
+            <button type="button" class="icons__button">
+              <img src="./assets/apple-icon.png" alt="apple" />
+            </button>
+          </div>
 
-                    <button type="button" class="icons__button">
-                        <img src="./resources/apple-icon.png" alt="apple">
-                    </button>
-                </div>
+          <label class="login__label--checkbox">
+            <input type="checkbox" class="input--checkbox" />
+            Manter login
+          </label>
+        </div>
 
-                <label class="login__label--checkbox">
-                    <input type="checkbox" class="input--checkbox">
-                    Manter login
-                </label>
-            </div>
+        <div class="wrapper">
+          <button type="button" class="login__button" disabled>
+            <a href="#">Entrar</a>
+          </button>
 
-            <div class="wrapper">
-                <button type="button" class="login__button" disabled><a href="#">Entrar</a></button>
+          Não possui uma conta?
+          <a href="./cadastro.html" class="login__link">Crie uma agora!</a>
+        </div>
+      </section>
 
-                Não possui uma conta?
-                <a href="./cadastro.html" class="login__link">Crie uma agora!</a>
-            </div>
-
-        </section>
-
-        <section class="wallpaper"></section>
+      <section class="wallpaper"></section>
     </main>
-
-</body>
-
+  </body>
 </html>

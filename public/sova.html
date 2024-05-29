@@ -1,83 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <title>Agente - SOVA</title>
-    <link rel="icon" href="./resources/agentes/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css" />
-    <link rel="stylesheet" href="./styles/agentes.css" />
-</head>
+    <link rel="icon" href="./assets/agentes/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css"
+    />
+    <link rel="stylesheet" href="./css/agentes.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- HEADER -->
     <header>
-        <video autoplay muted loop id="myVideo">
-            <source src="./resources/agentes/video/agent-background-generic.mp4" type="video/mp4" />
-        </video>
-        <div class="sova-img-container">
-            <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf11234f4775729b7/5ebf2c275e73766852c8d5d4/V_AGENTS_587x900_ALL_Sova_2.png"
-                alt="sova-img" class="sova-img" />
+      <video autoplay muted loop id="myVideo">
+        <source
+          src="./assets/agentes/video/agent-background-generic.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="sova-img-container">
+        <img
+          src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf11234f4775729b7/5ebf2c275e73766852c8d5d4/V_AGENTS_587x900_ALL_Sova_2.png"
+          alt="sova-img"
+          class="sova-img"
+        />
+      </div>
+      <div class="header-text-container">
+        <h1 id="agent-name">SOVA</h1>
+        <div class="desc-container">
+          <p>// Agente 04</p>
+          <h2><img src="./img/Initiator-icon.png" alt="" /> INICIADOR</h2>
+          <p>
+            Nascido sob o eterno inverno das tundras russas, Sova rastreia,
+            encontra e elimina inimigos com eficiência e precisão implacáveis.
+            Seu arco personalizado e suas habilidades inigualáveis de
+            reconhecimento garantem que nenhuma presa escape.
+          </p>
         </div>
-        <div class="header-text-container">
-            <h1 id="agent-name">SOVA</h1>
-            <div class="desc-container">
-                <p>// Agente 04</p>
-                <h2><img src="./img/Initiator-icon.png" alt="" /> INICIADOR</h2>
-                <p>
-                    Nascido sob o eterno inverno das tundras russas, Sova rastreia, encontra e elimina inimigos com
-                    eficiência e precisão implacáveis. Seu arco personalizado e suas habilidades inigualáveis de
-                    reconhecimento garantem que nenhuma presa escape.
-                </p>
-            </div>
-        </div>
+      </div>
     </header>
     <!-- END OF HEADER -->
 
     <!-- SKILL -->
     <section class="skill-container" id="skill">
-        <h1><span>//</span> SPECIAL ABILITIES</h1>
-        <div class="abilities-container">
-            <div class="abilities-button-text">
-                <div class="abilities-button">
-                    <div class="radio-container">
-                        <input type="radio" name="skill-btn" class="radio-btn" value="0" />
-                        <input type="radio" name="skill-btn" class="radio-btn" value="1" />
-                        <input type="radio" name="skill-btn" class="radio-btn" value="2" />
-                        <input type="radio" name="skill-btn" class="radio-btn" value="3" />
-                    </div>
-                    <button class="abilities-ico" id="0" onclick="skillBtn(0)"><img
-                            src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltebf4f748f87b2222/5eaf85dc4398082ffe24018f/TX_Sova_Q.png"
-                            alt="" /></button>
-                    <button class="abilities-ico" id="1" onclick="skillBtn(1)"><img
-                            src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt5084114604f20525/5eaf85b108d37e6d82ef74ef/TX_Sova_E.png"
-                            alt="" /></button>
-                    <button class="abilities-ico" id="2" onclick="skillBtn(2)"><img
-                            src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt74a6f56b5c37edb5/5eaf85b1f66b2515dea76b26/TX_Sova_C.png"
-                            alt="" /></button>
-                    <button class="abilities-ico" id="3" onclick="skillBtn(3)"><img
-                            src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte5515bdb07fabe98/5eaf85b1b8a6356e4ddc1001/TX_Sova_X.png"
-                            alt="" /></button>
-                </div>
-                <br />
-                <div class="abilities-text">
-                    <h2 id="abilities-text-head">Escolha uma habilidade pressionando o botão acima</h2>
-                    <br />
-                    <p id="abilities-text-body"></p>
-                </div>
-                <br />
+      <h1><span>//</span> SPECIAL ABILITIES</h1>
+      <div class="abilities-container">
+        <div class="abilities-button-text">
+          <div class="abilities-button">
+            <div class="radio-container">
+              <input
+                type="radio"
+                name="skill-btn"
+                class="radio-btn"
+                value="0"
+              />
+              <input
+                type="radio"
+                name="skill-btn"
+                class="radio-btn"
+                value="1"
+              />
+              <input
+                type="radio"
+                name="skill-btn"
+                class="radio-btn"
+                value="2"
+              />
+              <input
+                type="radio"
+                name="skill-btn"
+                class="radio-btn"
+                value="3"
+              />
             </div>
-            <video controls autoplay loop class="abilities-vid" id="abilities-src">
-                <source
-                    src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt7af29765c99f807d/5ecad882722d20585b2f4a48/Sova_Q_v001_web.mp4"
-                    type="video/mp4" />
-            </video>
+            <button class="abilities-ico" id="0" onclick="skillBtn(0)">
+              <img
+                src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltebf4f748f87b2222/5eaf85dc4398082ffe24018f/TX_Sova_Q.png"
+                alt=""
+              />
+            </button>
+            <button class="abilities-ico" id="1" onclick="skillBtn(1)">
+              <img
+                src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt5084114604f20525/5eaf85b108d37e6d82ef74ef/TX_Sova_E.png"
+                alt=""
+              />
+            </button>
+            <button class="abilities-ico" id="2" onclick="skillBtn(2)">
+              <img
+                src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt74a6f56b5c37edb5/5eaf85b1f66b2515dea76b26/TX_Sova_C.png"
+                alt=""
+              />
+            </button>
+            <button class="abilities-ico" id="3" onclick="skillBtn(3)">
+              <img
+                src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte5515bdb07fabe98/5eaf85b1b8a6356e4ddc1001/TX_Sova_X.png"
+                alt=""
+              />
+            </button>
+          </div>
+          <br />
+          <div class="abilities-text">
+            <h2 id="abilities-text-head">
+              Escolha uma habilidade pressionando o botão acima
+            </h2>
+            <br />
+            <p id="abilities-text-body"></p>
+          </div>
+          <br />
         </div>
+        <video controls autoplay loop class="abilities-vid" id="abilities-src">
+          <source
+            src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt7af29765c99f807d/5ecad882722d20585b2f4a48/Sova_Q_v001_web.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
     </section>
     <hr />
     <br /><br /><br /><br /><br />
@@ -85,25 +137,57 @@
 
     <!-- OTHER AGENTS -->
     <section class="other-agents">
-        <h1><span>//</span> OUTROS AGENTES</h1>
-        <div class="agents-container">
-            <a href="astra.html" class="agent" id="1"><img src="./resources/agentes/astra.png" alt="" /></a>
-            <a href="breach.html" class="agent" id="2"><img src="./resources/agentes/breach.png" alt="" /></a>
-            <a href="brim.html" class="agent" id="3"><img src="./resources/agentes/brimstone.png" alt="" /></a>
-            <a href="cypher.html" class="agent" id="4"><img src="./resources/agentes/cypher.png" alt="" /></a>
-            <a href="jett.html" class="agent" id="5"><img src="./resources/agentes/jett.png" alt="" /></a>
-            <a href="KAYO.html" class="agent" id="6"><img src="./resources/agentes/kayo.png" alt="" /></a>
-            <a href="killjoy.html" class="agent" id="7"><img src="./resources/agentes/killjoy.png" alt="" /></a>
-            <a href="omen.html" class="agent" id="8"><img src="./resources/agentes/omen.png" alt="" /></a>
-            <a href="phoenix.html" class="agent" id="9"><img src="./resources/agentes/phoenix.png" alt="" /></a>
-            <a href="raze.html" class="agent" id="10"><img src="./resources/agentes/raze.png" alt="" /></a>
-            <a href="reyna.html" class="agent" id="11"><img src="./resources/agentes/reyna.png" alt="" /></a>
-            <a href="sage.html" class="agent" id="12"><img src="./resources/agentes/sage.png" alt="" /></a>
-            <a href="skye.html" class="agent" id="13"><img src="./resources/agentes/skye.png" alt="" /></a>
-            <a href="sova.html" class="agent" id="14"><img src="./resources/agentes/sova.png" alt="" /></a>
-            <a href="viper.html" class="agent" id="15"><img src="./resources/agentes/viper.png" alt="" /></a>
-            <a href="yoru.html" class="agent" id="16"><img src="./resources/agentes/yoru.png" alt="" /></a>
-        </div>
+      <h1><span>//</span> OUTROS AGENTES</h1>
+      <div class="agents-container">
+        <a href="astra.html" class="agent" id="1"
+          ><img src="./assets/agentes/astra.png" alt=""
+        /></a>
+        <a href="breach.html" class="agent" id="2"
+          ><img src="./assets/agentes/breach.png" alt=""
+        /></a>
+        <a href="brim.html" class="agent" id="3"
+          ><img src="./assets/agentes/brimstone.png" alt=""
+        /></a>
+        <a href="cypher.html" class="agent" id="4"
+          ><img src="./assets/agentes/cypher.png" alt=""
+        /></a>
+        <a href="jett.html" class="agent" id="5"
+          ><img src="./assets/agentes/jett.png" alt=""
+        /></a>
+        <a href="KAYO.html" class="agent" id="6"
+          ><img src="./assets/agentes/kayo.png" alt=""
+        /></a>
+        <a href="killjoy.html" class="agent" id="7"
+          ><img src="./assets/agentes/killjoy.png" alt=""
+        /></a>
+        <a href="omen.html" class="agent" id="8"
+          ><img src="./assets/agentes/omen.png" alt=""
+        /></a>
+        <a href="phoenix.html" class="agent" id="9"
+          ><img src="./assets/agentes/phoenix.png" alt=""
+        /></a>
+        <a href="raze.html" class="agent" id="10"
+          ><img src="./assets/agentes/raze.png" alt=""
+        /></a>
+        <a href="reyna.html" class="agent" id="11"
+          ><img src="./assets/agentes/reyna.png" alt=""
+        /></a>
+        <a href="sage.html" class="agent" id="12"
+          ><img src="./assets/agentes/sage.png" alt=""
+        /></a>
+        <a href="skye.html" class="agent" id="13"
+          ><img src="./assets/agentes/skye.png" alt=""
+        /></a>
+        <a href="sova.html" class="agent" id="14"
+          ><img src="./assets/agentes/sova.png" alt=""
+        /></a>
+        <a href="viper.html" class="agent" id="15"
+          ><img src="./assets/agentes/viper.png" alt=""
+        /></a>
+        <a href="yoru.html" class="agent" id="16"
+          ><img src="./assets/agentes/yoru.png" alt=""
+        /></a>
+      </div>
     </section>
     <!-- END OF OTHER AGENTS -->
 
@@ -111,19 +195,18 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- My JS -->
-    <script src="./scripts/agentes.mjs"></script>
+    <script src="./js/agentes.mjs"></script>
     <script>
-        function skillBtn(n) {
-            skillRadio[n].checked = true;
-            if (skillRadio[n].checked == true) {
-                addBtn0(n);
-                abilitiesTextHead.innerHTML = abilities[0][n]["skill"];
-                abilitiesTextBody.innerHTML = abilities[0][n]["desc"];
-                abilitiesSrc.classList.add("show");
-                abilitiesSrc.src = abilities[0][n]["video"];
-            }
+      function skillBtn(n) {
+        skillRadio[n].checked = true;
+        if (skillRadio[n].checked == true) {
+          addBtn0(n);
+          abilitiesTextHead.innerHTML = abilities[0][n]["skill"];
+          abilitiesTextBody.innerHTML = abilities[0][n]["desc"];
+          abilitiesSrc.classList.add("show");
+          abilitiesSrc.src = abilities[0][n]["video"];
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>
