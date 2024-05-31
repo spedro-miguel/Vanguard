@@ -81,6 +81,10 @@ header a {
   width: 100%;
 }
 
+#form {
+  width: 400px;
+}
+
 .input {
   width: 100%;
   background-color: var(--light-grey);
@@ -102,6 +106,13 @@ header a {
   margin: 20px;
   cursor: text;
   transition: all 200ms ease;
+}
+
+.cadastro__label .span-required {
+  font-size: 13px;
+  margin: 3px 0 0 1px;
+  color: var(--red);
+  display: none;
 }
 
 .input:focus {
@@ -188,9 +199,9 @@ header a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ee6062;
+  background-color: var(--whitesmoke);
   border-radius: 20px;
-  border: none;
+  border-color: var(--black);
   cursor: pointer;
   margin-bottom: 60px;
 }
@@ -201,18 +212,8 @@ header a {
   color: var(--black);
 }
 
-.cadastro__button {
-  fill: white;
-}
-
-.cadastro__button:disabled {
-  cursor: auto;
-  background-color: white;
-  border: 2px solid var(--light-grey);
-}
-
-.cadastro__button:disabled {
-  fill: var(--grey);
+.cadastro__button:hover {
+  background-color: var(--light-grey);
 }
 
 .login__link {
