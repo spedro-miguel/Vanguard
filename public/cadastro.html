@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/logo vanguard 4k.png" />
-    <link rel="stylesheet" href="login.html" />
-    <link rel="stylesheet" href="./css/cadastro.css" />
-    <script src="./js/cadastro.js" defer></script>
-    <title>Vanguard - Cadastro</title>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <a href="./index.html">SITE</a>
-        <a href="./agentes.html">AGENTES</a>
-        <a href="./mapas.html">MAPAS</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/logo vanguard 4k.png" />
+  <link rel="stylesheet" href="login.html" />
+  <link rel="stylesheet" href="./css/cadastro.css" />
+  <script src="./js/cadastro.js" defer></script>
+  <title>Vanguard - Cadastro</title>
+</head>
 
-    <main>
-      <section class="cadastro">
-        <div class="wrapper">
-          <img src="./assets/logo vanguard 4k.png" class="cadastro__logo" />
+<body>
+  <header>
+    <nav>
+      <a href="./index.html">SITE</a>
+      <a href="./agentes.html">AGENTES</a>
+      <a href="./mapas.html">MAPAS</a>
+    </nav>
+  </header>
 
-          <h1 class="cadastro__title">Cadastro</h1>
+  <main>
+    <section class="cadastro">
+      <div class="wrapper">
+        <img src="./assets/logo vanguard 4k.png" class="cadastro__logo" />
 
+        <h1 class="cadastro__title">Cadastro</h1>
+        <form id="form">
           <label class="cadastro__label">
             <span>nome de usuário</span>
-            <input type="text" name="username" class="input" />
+            <input type="text" name="username" class="input required" oninput="nameValidate()" required />
+            <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
           </label>
 
           <label class="cadastro__label">
             <span>email</span>
-            <input type="email" name="email" class="input" />
+            <input type="email" name="email" class="input required" oninput="emailValidate()" />
+            <span class="span-required">Digite um email válido</span>
           </label>
 
           <label class="cadastro__label">
             <span>senha</span>
-            <input type="password" name="password" class="input" />
+            <input type="password" name="password" class="input required" oninput="mainPasswordValidate()" />
+            <span class="span-required">Digite uma senha com no mínimo 7 caracteres</span>
           </label>
 
           <label class="cadastro__label">
             <span>confirmar senha</span>
-            <input type="password" name="password" class="input" />
+            <input type="password" name="password" class="input required" oninput="comparePassword()" />
+            <span class="span-required">As senhas devem ser compatíveis</span>
           </label>
 
           <div class="cadastro__icons">
@@ -59,19 +64,20 @@
               <img src="./assets/apple-icon.png" alt="apple" />
             </button>
           </div>
-        </div>
+      </div>
 
-        <div class="wrapper">
-          <button type="button" class="cadastro__button" disabled>
-            <a href="./login.html"> Cadastrar </a>
-          </button>
+      <div class="wrapper">
+        <button type="button" class="cadastro__button">
+          <a href="./login.html">Cadastrar</a>
+        </button>
+        </form>
+        Já possui uma conta?
+        <a href="./login.html" class="login__link">Faça login agora!</a>
+      </div>
+    </section>
 
-          Já possui uma conta?
-          <a href="./login.html" class="login__link">Faça login agora!</a>
-        </div>
-      </section>
+    <section class="wallpaper"></section>
+  </main>
+</body>
 
-      <section class="wallpaper"></section>
-    </main>
-  </body>
 </html>
