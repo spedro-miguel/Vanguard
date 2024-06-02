@@ -78,13 +78,18 @@ body {
 .start_btn button {
   font-size: 1.6rem;
   font-weight: 500;
-  color: var(--red);
+  color: var(--black);
   padding: 15px 30px;
   outline: none;
   border: none;
   border-radius: 5px;
   background: var(--white);
   cursor: pointer;
+}
+
+.start_btn button:hover {
+  background-color: var(--whitesmoke);
+  color: var(--red);
 }
 
 .info_box {
