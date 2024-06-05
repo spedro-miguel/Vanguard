@@ -2,7 +2,7 @@ let questions = [
   {
     numb: 1,
     question: "Quantos mapas o valorant possui?",
-    answer: "9",
+    answer: "10",
     options: ["6", "8", "10", "9"],
   },
   {
@@ -24,13 +24,13 @@ let questions = [
   },
   {
     numb: 4,
-    question: "Que time ganhou o Champions em 2021?",
+    question: "Que time ganhou o Valorant Champions em 2021?",
     answer: "Acend",
     options: ["Sentinels", "Acend", "Evil Geniuses", "Loud"],
   },
   {
     numb: 5,
-    question: "Quantos iniciadores existem no jogo?",
+    question: "Quantos agentes iniciadores existem no jogo?",
     answer: "6",
     options: ["5", "7", "6", "4"],
   },
