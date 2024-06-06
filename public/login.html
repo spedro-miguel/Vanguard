@@ -30,14 +30,14 @@
 
           <label class="login__label">
             <span>email</span>
-            <input type="email" name="email" class="input required" oninput="emailValidate()" />
-            <span class="span-required">Digite um email válido</span>
+            <input id="input_email" type="email" name="email" class="input required" />
+            <div id="exibirErroEmail" class="span-required">Digite um email válido</div>
           </label>
 
           <label class="login__label">
             <span>senha</span>
-            <input type="password" name="password" class="input required" oninput="mainPasswordValidate()" />
-            <span class="span-required">Digite uma senha com no mínimo 7 caracteres</span>
+            <input id="input_senha" type="password" name="password" class="input required" />
+            <div id="exibirErroSenha" class="span-required">Digite uma senha com no mínimo 7 caracteres</div>
           </label>
 
           <div class="login__icons">
@@ -61,8 +61,8 @@
         </div>
 
         <div class="wrapper">
-          <button type="button" class="login__button" onclick="login()">
-            <a href="./quiz.html">Entrar</a>
+          <button type="button" class="login__button" onclick="logar()">
+            Entrar
           </button>
     </form>
     Não possui uma conta?

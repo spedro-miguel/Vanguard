@@ -2,7 +2,7 @@ let questions = [
   {
     numb: 1,
     question: "Quantos mapas o valorant possui?",
-    answer: "10",
+    answer: "9",
     options: ["6", "8", "10", "9"],
   },
   {
@@ -24,13 +24,13 @@ let questions = [
   },
   {
     numb: 4,
-    question: "Que time ganhou o Valorant Champions em 2021?",
+    question: "Que time ganhou o Champions em 2021?",
     answer: "Acend",
     options: ["Sentinels", "Acend", "Evil Geniuses", "Loud"],
   },
   {
     numb: 5,
-    question: "Quantos agentes iniciadores existem no jogo?",
+    question: "Quantos iniciadores existem no jogo?",
     answer: "6",
     options: ["5", "7", "6", "4"],
   },
@@ -204,7 +204,7 @@ function optionSelected(answer) {
   }
   next_btn.classList.add("show"); //mostra o botão de próximo ao selecionar qualquer opção
 }
-function showResult() {
+async function showResult() {
   info_box.classList.remove("activeInfo");
   quiz_box.classList.remove("activeQuiz");
   result_box.classList.add("activeResult"); //mostra o resultado
@@ -238,6 +238,23 @@ function showResult() {
       "</p></span>";
     scoreText.innerHTML = scoreTag;
   }
+  const response = await fetch("/medidas/guardarPontuacao", {
+    // Define o método da requisição como POST
+    method: "POST",
+    // Define o cabeçalho da requisição, especificando que o corpo será em formato JSON
+    headers: {
+      "Content-Type": "application/json",
+    },
+    // Converte o objeto JavaScript em uma string JSON e define-o como o corpo da requisição
+    body: JSON.stringify({
+      pontuacao: userScore, // Adiciona a pontuação atual ao corpo da requisição
+      totalPerguntas: questions.length, // Adiciona o número total de perguntas ao corpo da requisição
+      fkUsuario: sessionStorage.ID_USUARIO, // Adiciona o ID do usuário, armazenado no sessionStorage, ao corpo da requisição
+    }),
+  });
+
+  const result = await response.json();
+  console.log(result);
 }
 
 function startTimer(time) {

@@ -29,26 +29,26 @@
         <form id="form">
           <label class="cadastro__label">
             <span>nome de usuário</span>
-            <input type="text" name="username" class="input required" oninput="nameValidate()" required />
-            <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+            <input id="input_nome" type="text" name="username" class="input required"/>
+            <span id="exibirErroNome" class="span-required">Nome deve ter no mínimo 3 caracteres</span>
           </label>
 
           <label class="cadastro__label">
             <span>email</span>
-            <input type="email" name="email" class="input required" oninput="emailValidate()" />
-            <span class="span-required">Digite um email válido</span>
+            <input id="input_email" type="email" name="email" class="input required"/>
+            <span id="exibirErroEmail" class="span-required">Digite um email válido</span>
           </label>
 
           <label class="cadastro__label">
             <span>senha</span>
-            <input type="password" name="password" class="input required" oninput="mainPasswordValidate()" />
-            <span class="span-required">Digite uma senha com no mínimo 7 caracteres</span>
+            <input id="input_senha" type="password" name="password" class="input required"/>
+            <span id="exibirErroSenha" class="span-required">Digite uma senha com no mínimo 7 caracteres</span>
           </label>
 
           <label class="cadastro__label">
             <span>confirmar senha</span>
-            <input type="password" name="password" class="input required" oninput="comparePassword()" />
-            <span class="span-required">As senhas devem ser compatíveis</span>
+            <input id="input_compararSenha" type="password" name="password" class="input required" />
+            <span id="exibirErroComparacaoSenha" class="span-required">As senhas devem ser compatíveis</span>
           </label>
 
           <div class="cadastro__icons">
@@ -68,7 +68,7 @@
 
       <div class="wrapper">
         <button type="button" class="cadastro__button" onclick="cadastrar()">
-          <a href="./login.html">Cadastrar</a>
+          Cadastrar
         </button>
         </form>
         Já possui uma conta?
