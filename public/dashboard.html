@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/dashboard.js"></script>
   </head>
-  <body>
+  <body onload="mostrar()">
     <div class="container">
       <div class="navigation">
         <ul>
@@ -27,6 +27,14 @@
                 ><ion-icon name="home-outline"></ion-icon
               ></span>
               <span class="title">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="./quiz.html">
+              <span class="icon"
+                ><ion-icon name="game-controller-outline"></ion-icon
+              ></span>
+              <span class="title">Quiz</span>
             </a>
           </li>
           <li>
@@ -50,7 +58,7 @@
         <div class="cardBox">
           <div class="card">
             <div>
-              <div class="numbers">1,504</div>
+              <div class="numbers">1,307</div>
               <div class="cardName">Pontuação</div>
             </div>
             <div class="iconBx">
@@ -59,7 +67,7 @@
           </div>
           <div class="card">
             <div>
-              <div class="numbers">00:23</div>
+              <div class="numbers">00:13</div>
               <div class="cardName">Tempo Decorrido</div>
             </div>
             <div class="iconBx">
@@ -71,30 +79,38 @@
         <!-- charts -->
         <div id="div_chart" class="graphBox">
           <div class="box"><canvas id="myChart"></canvas></div>
-          <div class="box">
-            <button onclick="mostrar()">Ver ranking</button>
-          </div>
-          <div style="display: flex; flex-direction: row">
-            <div style="margin-left: 50vw" class="div-results">
-              <table
-                id="ranking_table"
-                style="
-                  color: white;
-                  display: none;
-                  width: 60vw;
-                  overflow-y: auto;
-                "
-              >
-                <thead>
-                  <tr>
-                    <th>Posição</th>
-                    <th>Nome</th>
-                    <th>Quantidade de Acertos</th>
-                    <th>Data e Hora da Rodada</th>
-                  </tr>
-                </thead>
-                <tbody id="ranking_quiz"></tbody>
-              </table>
+          <div style="background-color: #cf3c3f" class="box box2">
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+                margin: auto;
+              "
+            >
+              <div class="div-results">
+                <table
+                  id="ranking_table"
+                  style="
+                    color: #fff;
+                    display: none;
+                    width: 60vw;
+                    text-align: center;
+                    font-size: 1.2rem;
+                  "
+                >
+                  <thead>
+                    <tr>
+                      <th class="column">Posição</th>
+                      <th class="column">Nome</th>
+                      <th class="column">Quantidade de Acertos</th>
+                      <th class="column">Data e Hora da Rodada</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ranking_quiz"></tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

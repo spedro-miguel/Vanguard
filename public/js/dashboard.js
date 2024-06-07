@@ -29,7 +29,7 @@ function mostrar() {
       if (resposta.length === 0) {
         var rankingQuiz = document.getElementById("ranking_quiz");
         var mensagem = document.createElement("tr");
-        mensagem.innerHTML = `<td colspan="4" style="font-weight: bold;color: #32b9cd;">NENHUM RESULTADO ENCONTRADO PARA O USUÁRIO "${sessionStorage.ID_USUARIO}"</td>`;
+        mensagem.innerHTML = `<td colspan="4" style="font-weight: bold;color: #fff;">NENHUM RESULTADO ENCONTRADO PARA O USUÁRIO "${sessionStorage.ID_USUARIO}"</td>`;
         rankingQuiz.appendChild(mensagem);
         return;
       }
@@ -57,15 +57,15 @@ function mostrar() {
       }
 
       document.getElementById("div_chart").style.display = "block";
-
+      Chart.defaults.font.size = 16;
       const data = {
         labels: nomeDoUsuario,
         datasets: [
           {
-            label: "Pontuação",
-            backgroundColor: "#3022cf",
-            borderColor: "black",
-            borderWidth: 2,
+            label: "Acertos",
+            backgroundColor: "#fff",
+            borderColor: "#cf3c3f",
+            borderWidth: 3,
             data: pontosDoUsuario,
           },
         ],

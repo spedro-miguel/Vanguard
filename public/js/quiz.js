@@ -2,7 +2,7 @@ let questions = [
   {
     numb: 1,
     question: "Quantos mapas o valorant possui?",
-    answer: "9",
+    answer: "10",
     options: ["6", "8", "10", "9"],
   },
   {
