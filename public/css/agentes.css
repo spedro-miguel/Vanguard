@@ -20,7 +20,7 @@ html {
 body {
   width: 100vw;
   background-color: #fafaf9;
-  background-image: url("./bg.png");
+  background-image: url("./background_agents.png");
   background-attachment: fixed;
   background-size: cover;
 }
@@ -57,18 +57,19 @@ a {
 }
 .nav__bar {
   width: 100%;
+  font-size: 20px;
+  font-weight: 600;
   margin: auto;
+  padding-left: 30px;
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 30px;
   position: relative;
   z-index: 100;
-  font-size: 15px;
+  background-color: #0e1922;
 }
 .nav__bar a {
-  color: #000;
+  color: #fff;
   font-weight: 600;
   margin-right: 40px;
 }
@@ -97,6 +98,7 @@ a {
 
 .header-text-container h1 {
   font-size: 20rem;
+  margin-bottom: 80px;
 }
 
 .header-text-container h2 {
@@ -115,6 +117,7 @@ a {
   font-size: 2rem;
   font-weight: 300;
   text-align: justify;
+  margin-bottom: 80px;
 }
 
 /* ABILITIES */
@@ -195,6 +198,11 @@ a {
   font-weight: 100;
   width: 60%;
   text-align: justify;
+}
+
+.abilities-text p {
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 
 .abilities-text h2 span {

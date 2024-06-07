@@ -1,60 +1,3 @@
-const form = document.getElementById("form");
-const campos = document.querySelectorAll(".required");
-const spans = document.querySelectorAll(".span-required");
-const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  console.log("dsadad");
-  // nameValidate();
-  // emailValidate();
-  // mainPasswordValidate();
-  // comparePassword();
-});
-
-function setError(index) {
-  campos[index].style.border = "2px solid #e63636";
-  spans[index].style.display = "block";
-}
-
-function removeError(index) {
-  campos[index].style.border = "";
-  spans[index].style.display = "none";
-}
-
-function nameValidate() {
-  if (campos[0].value.length < 3) {
-    setError(0);
-  } else {
-    removeError(0);
-  }
-}
-
-function emailValidate() {
-  if (!emailRegex.test(campos[1].value)) {
-    setError(1);
-  } else {
-    removeError(1);
-  }
-}
-
-function mainPasswordValidate() {
-  if (campos[2].value.length < 7) {
-    setError(2);
-  } else {
-    removeError(2);
-    comparePassword();
-  }
-}
-
-function comparePassword() {
-  if (campos[2].value == campos[3].value && campos[3].value >= 7) {
-    removeError(3);
-  } else {
-    setError(3);
-  }
-}
-
 const inputs = document.querySelectorAll(".input");
 const button = document.querySelector(".cadastro__button");
 
@@ -72,3 +15,77 @@ const handleFocusOut = ({ target }) => {
 
 inputs.forEach((input) => input.addEventListener("focus", handleFocus));
 inputs.forEach((input) => input.addEventListener("focusout", handleFocusOut));
+
+function cadastrar() {
+  //Recupere o valor da nova input pelo nome do id
+  // Agora vá para o método fetch logo abaixo
+  var nomeVar = input_nome.value;
+  var emailVar = input_email.value;
+  var senhaVar = input_senha.value;
+  var senhaComparacaoVar = input_compararSenha.value;
+  exibirErroNome.innerHTML = "";
+  exibirErroEmail.innerHTML = "";
+  exibirErroSenha.innerHTML = "";
+  exibirErroComparacaoSenha.innerHTML = "";
+
+  if (nomeVar.length <= 3) {
+    exibirErroNome.style.display = "block";
+    exibirErroNome.innerHTML = "Nome deve ter no mínimo 3 caracteres";
+  } else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".") == -1) {
+    exibirErroEmail.style.display = "block";
+    exibirErroEmail.innerHTML = "Digite um email válido.";
+  } else if (senhaVar.length < 7) {
+    exibirErroSenha.style.display = "block";
+    exibirErroSenha.innerHTML = "Digite uma senha com no mínimo 7 caracteres.";
+  } else if (senhaComparacaoVar != senhaVar) {
+    exibirErroComparacaoSenha.style.display = "block";
+    exibirErroComparacaoSenha.innerHTML = "As senhas devem ser compatíveis.";
+
+    finalizarAguardar();
+    return false;
+  } else {
+    // setInterval(sumirMensagem, 5000);
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+        senhaComparacaoServer: senhaComparacaoVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          // cardErro.style.display = "block";
+
+          /*mensagem_erro.innerHTML =
+                    "Cadastro realizado com sucesso! Redirecionando para tela de Login...";*/
+          window.location = "./login.html";
+
+          // setTimeout(() => {
+          //   window.location = "login.html";
+          //}, "1000");
+
+          // limparFormulario();
+          // finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+
+    return false;
+  }
+}

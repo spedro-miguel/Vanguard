@@ -66,6 +66,7 @@ main {
   background-color: var(--color-redValorant);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .button__child::before {
@@ -170,7 +171,7 @@ main {
 .hero__subtitle {
   color: var(--color-beige);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .hero__valorant {
@@ -323,6 +324,7 @@ main {
 .content__paragraph {
   color: rgba(0, 0, 0, 0.4);
   font-weight: 600;
+  font-size: 1.2rem;
   word-spacing: 3px;
   line-height: 22px;
   margin-bottom: 40px;
@@ -682,6 +684,7 @@ main {
 
 .maps__paragraph {
   font-weight: 600;
+  font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.4);
   width: 90%;
   padding-bottom: 30px;

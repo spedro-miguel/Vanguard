@@ -200,11 +200,15 @@ body {
   position: relative;
   background: var(--white);
   padding: 20px;
-  width: 100%;
+  width: 80%;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
+.column {
+  font-size: 1.4rem;
+}
 /* responsive */
 @media (max-width: 991px) {
   .graphBox {

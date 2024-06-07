@@ -13,23 +13,21 @@ create table usuario (
 	idUsuario int primary key auto_increment,
     nomeUsuario varchar(45) not null,
     email varchar(256) not null,
-    senha varchar(7) not null
+    senha varchar(45) not null
 );
 
 create table pontuacao (
 	idPontuacao int primary key auto_increment,
     pontuacao int not null,
-    tempo time not null,
-    acertos int not null,
+    totalPerguntas int not null,
+    data TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
     fkUsuario int,
     foreign key (fkUsuario) references usuario (idusuario)
 );
 
 create table pergunta (
 	idPergunta int primary key auto_increment,
-    pergunta varchar(45) not null,
-    valor int not null,
-    resposta varchar(45) not null
+    pergunta varchar(45) not null
 );
 
 create table alternativa (
@@ -40,12 +38,12 @@ create table alternativa (
 );
 
 insert into pergunta values
-    (default, 'Quantos mapas o valorant possui?', 200, '10'),
-    (default, 'Qual o nome da agente brasileira?', 300, 'Raze'),
-    (default, 'Quando o jogo foi lançado?', 400, '2 de junho de 2020'),
-    (default, 'Que time ganhou o Valorant Champions em 2021?', 500, 'Acend'),
-    (default, 'Quantos agentes iniciadores existem no jogo?', 600, '6'),
-    (default, 'Quantos agentes existiam durante o beta?', 750, '10');
+    (default, 'Quantos mapas o valorant possui?'),
+    (default, 'Qual o nome da agente brasileira?'),
+    (default, 'Quando o jogo foi lançado?', 400),
+    (default, 'Que time ganhou o Valorant Champions em 2021?'),
+    (default, 'Quantos agentes iniciadores existem no jogo?'),
+    (default, 'Quantos agentes existiam durante o beta?');
 
     insert into alternativa values
     (default, '6', 1),
@@ -78,5 +76,19 @@ insert into pergunta values
     (default, '8', 6),
     (default, '10', 6);
 
+select * from usuario;
+select * from pontuacao;
 select * from pergunta;
 select * from alternativa;
+
+
+SELECT u.nomeUsuario, p.pontuacao, p.data
+FROM pontuacao p
+JOIN usuario u ON p.fkUsuario = u.idUsuario
+JOIN (
+    SELECT fkUsuario, MAX(idPontuacao) AS ultimoId
+    FROM pontuacao
+    GROUP BY fkUsuario
+) AS sq ON p.fkUsuario = sq.fkUsuario AND p.idPontuacao = sq.ultimoId
+ORDER BY p.pontuacao DESC
+LIMIT 7;
