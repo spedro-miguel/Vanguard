@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="stylesheet" href="./css/quiz.css" />
     <link rel="icon" href="./assets/agentes/logo.png" type="image/x-icon" />
     <title>Quiz</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="nav__bar">
-        <nav>
-            <a href="./index.html">SITE</a>
-            <a href="./mapas.html">MAPAS</a>
-            <a href="./agentes.html">AGENTES</a>
-            <a href="./dashboard.html">DASHBOARD</a>
-        </nav>
+      <nav>
+        <a href="./index.html">SITE</a>
+        <a href="./mapas.html">MAPAS</a>
+        <a href="./agentes.html">AGENTES</a>
+        <a href="./dashboard.html">DASHBOARD</a>
+      </nav>
     </header>
     <!-- Começar quiz -->
     <div class="start_btn"><button>Começar o quiz</button></div>
@@ -25,66 +24,67 @@
 
     <!-- Regras quiz -->
     <div class="info_box">
-        <div class="info_title"><span>Regras do quiz</span></div>
-        <div class="info_list">
-            <div class="info">1. Você tem apenas <span>15 segundos</span> por questão.</div>
-            <div class="info">2. Ao selecionar uma resposta, não é possível desfazer.</div>
-            <div class="info">3. Se o tempo acabar não é possível selecionar uma resposta.</div>
-            <div class="info">4. Você não pode sair do quiz enquanto estiver jogando.</div>
-            <div class="info">5. Você ganha pontos com base nas respostas corretas.</div>
+      <div class="info_title"><span>Regras do quiz</span></div>
+      <div class="info_list">
+        <div class="info">
+          1. Você tem apenas <span>15 segundos</span> por questão.
         </div>
-        <div class="buttons">
-            <button class="quit">Sair</button>
-            <button class="restart">Iniciar</button>
+        <div class="info">
+          2. Ao selecionar uma resposta, não é possível desfazer.
         </div>
+        <div class="info">
+          3. Se o tempo acabar não é possível selecionar uma resposta.
+        </div>
+        <div class="info">
+          4. Você não pode sair do quiz enquanto estiver jogando.
+        </div>
+        <div class="info">
+          5. Você ganha pontos com base nas respostas corretas.
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="quit">Sair</button>
+        <button class="restart">Iniciar</button>
+      </div>
     </div>
     <!-- Fim regras quiz -->
 
     <!-- Caixa do quiz -->
     <div class="quiz_box">
-        <header>
-            <div class="title">Valorant Quiz</div>
-            <div class="timer">
-                <div class="time_left_txt">Tempo</div>
-                <div class="timer_sec">15</div>
-            </div>
-            <div class="time_line"></div>
-        </header>
-        <section>
-            <div class="que_text">
+      <header>
+        <div class="title">Valorant Quiz</div>
+        <div class="timer">
+          <div class="time_left_txt">Tempo</div>
+          <div class="timer_sec">15</div>
+        </div>
+        <div class="time_line"></div>
+      </header>
+      <section>
+        <div class="que_text"></div>
+        <div class="option_list"></div>
+      </section>
 
-            </div>
-            <div class="option_list">
-
-            </div>
-        </section>
-
-        <footer>
-            <div class="total_que">
-
-            </div>
-            <button class="next_btn">Próxima</button>
-        </footer>
+      <footer>
+        <div class="total_que"></div>
+        <button class="next_btn">Próxima</button>
+      </footer>
     </div>
     <!-- Fim caixa quiz -->
 
     <!-- Caixa resultado -->
     <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text">Você acabou o quiz!</div>
-        <div class="score_text">
-
-        </div>
-        <div class="buttons">
-            <button class="restart">Jogar novamente</button>
-            <a href="./dashboard.html"><button class="quit">Dashboard</button></a>
-        </div>
+      <div class="icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete_text">Você acabou o quiz!</div>
+      <div class="score_text"></div>
+      <div class="buttons">
+        <button class="restart">Jogar novamente</button>
+        <a href="./dashboard.html"><button class="quit">Dashboard</button></a>
+      </div>
     </div>
     <!-- Fim caixa resultado -->
 
     <script src="./js/quiz.js"></script>
-</body>
-
+  </body>
 </html>
